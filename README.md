@@ -1,6 +1,11 @@
 # leetcode
 
-运行环境：java8
+Runtime：
+win 10 x64
+Java version:
+java version "1.8.0_65"
+Java(TM) SE Runtime Environment (build 1.8.0_65-b17)
+Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode)
 
 |题号|题目|tag|难度|代码|
 |------|-------|------|------|------|
