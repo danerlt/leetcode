@@ -11,14 +11,15 @@
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-        if not head:return head
-        pre, post = head, head.next
-        while post is not None:
-            if pre.val == post.val:
-                pre.next = post.next
-                post = pre.next
-            else:
-                post = post.next
+        if not head: return head
+        curr = head.next
+        pre = head
+        while curr:
+            if pre.val == curr.val:
+                pre.next =curr.next
+            else:    
                 pre = pre.next
+            curr = curr.next
         return head
+        
 
