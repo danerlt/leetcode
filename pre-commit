@@ -13,7 +13,7 @@ import sys
 import traceback
 
 # pre_commit
-current_path = os.path.dirname(os.path.abspath(__file__))
+current_path = os.path.abspath(__file__)
 print(f"current_path: {current_path}")
 hooks_path = os.path.dirname(current_path)  # hooks目录
 git_path = os.path.dirname(hooks_path)  # .git目录
