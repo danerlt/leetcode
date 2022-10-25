@@ -3,6 +3,9 @@
 #
 # [63] 不同路径 II
 #
+from typing import List
+
+
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         # dp[i][j] 表示起点到坐标i,j的路径数
@@ -21,4 +24,4 @@ class Solution:
                 else:
                     dp[i][j] = 0    
         return dp[m-1][n-1]
-11
+
