@@ -15,9 +15,9 @@ import traceback
 # pre_commit
 current_path = os.path.dirname(os.path.abspath(__file__))
 print(f"current_path: {current_path}")
-hooks_path = os.path.dirname(current_path) # hooks目录
-git_path = os.path.dirname(hooks_path) # .git目录
-root_path = os.path.dirname(git_path) # 项目根目录
+hooks_path = os.path.dirname(current_path)  # hooks目录
+git_path = os.path.dirname(hooks_path)  # .git目录
+root_path = os.path.dirname(git_path)  # 项目根目录
 readme_path = os.path.join(root_path, "README.md")
 python3_path = os.path.join(root_path, "Python3")
 
