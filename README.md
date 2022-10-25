@@ -1,14 +1,36 @@
-# leetcode
+# leetcode 题解
 
-Runtime：</br>
-win 10 x64 </br>
-Java version:</br>
-java version "1.8.0_65"</br>
-Java(TM) SE Runtime Environment (build 1.8.0_65-b17)</br>
-Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode)</br>
+## Python3实现
 
-|题号|题目|tag|难度|代码|
-|------|-------|------|------|------|
-|283|[Move Zeroes](https://leetcode.com/problems/move-zeroes/)|Array,Two Pointers|easy|[code](https://github.com/Lt-grint/leetcode/blob/master/java/283%20Move%20Zeroes/Solution.java)|
-|387|[First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|String|easy|[code](https://github.com/Lt-grint/leetcode/blob/master/java/387%20First%20Unique%20Character/Solution.java)|
-|344|[Reverse String](https://leetcode.com/problems/reverse-string/)|String,Two Pointer|easy|[code](https://github.com/Lt-grint/leetcode/blob/master/java/344%20Reverse%20String/Solution.java)|
+| 题目 | 算法实现                                                 |  标签| 
+|------|------------------------------------------------------|------|
+| 2.两数相加 | [2.两数相加.py](./Python3/2.两数相加.py)                     | 
+| 3.无重复字符的最长子串 | [3.无重复字符的最长子串.py](./Python3/3.无重复字符的最长子串.py)         | 
+| 4.寻找两个有序数组的中位数 | [4.寻找两个有序数组的中位数.py](./Python3/4.寻找两个有序数组的中位数.py)     | 
+| 5.最长回文子串 | [5.最长回文子串.py](./Python3/5.最长回文子串.py)                 | 
+| 11.盛最多水的容器 | [11.盛最多水的容器.py](./Python3/11.盛最多水的容器.py)             | 
+| 35.搜索插入位置 | [35.搜索插入位置.py](./Python3/35.搜索插入位置.py)               | 
+| 43.字符串相乘 | [43.字符串相乘.py](./Python3/43.字符串相乘.py)                 | 数学,字符串,模拟
+| 50.Pow(x, n) | [50.Pow(x, n).py](./Python3/50.Pow(x, n).py)         | 递归,数学
+| 58.最后一个单词的长度 | [58.最后一个单词的长度.py](./Python3/58.最后一个单词的长度.py)         | 
+| 62.不同路径 | [62.不同路径.py](./Python3/62.不同路径.py)                   | 
+| 63.不同路径-ii | [63.不同路径-ii.py](./Python3/63.不同路径-ii.py)11111        | 
+| 67.二进制求和 | [67.二进制求和.py](./Python3/67.二进制求和.py)                 | 
+| 69.x-的平方根 | [69.x-的平方根.py](./Python3/69.x-的平方根.py)               | 
+| 83.删除排序链表中的重复元素 | [83.删除排序链表中的重复元素.py](./Python3/83.删除排序链表中的重复元素.py)   | 
+| 94.二叉树的中序遍历 | [94.二叉树的中序遍历.py](./Python3/94.二叉树的中序遍历.py)           | 栈,树,深度优先搜索,二叉树
+| 100.相同的树 | [100.相同的树.py](./Python3/100.相同的树.py)                 | 
+| 104.二叉树的最大深度 | [104.二叉树的最大深度.py](./Python3/104.二叉树的最大深度.py)         | 
+| 107.二叉树的层次遍历-ii | [107.二叉树的层次遍历-ii.py](./Python3/107.二叉树的层次遍历-ii.py)   | 
+| 110.平衡二叉树 | [110.平衡二叉树.py](./Python3/110.平衡二叉树.py)               | 
+| 111.二叉树的最小深度 | [111.二叉树的最小深度.py](./Python3/111.二叉树的最小深度.py)         | 
+| 112.路径总和 | [112.路径总和.py](./Python3/112.路径总和.py)                 | 
+| 144.二叉树的前序遍历 | [144.二叉树的前序遍历.py](./Python3/144.二叉树的前序遍历.py)         | 栈,树,深度优先搜索,二叉树
+| 145.二叉树的后序遍历 | [145.二叉树的后序遍历.py](./Python3/145.二叉树的后序遍历.py)         | 栈,树,深度优先搜索,二叉树
+| 171.Excel 表列序号 | [171.Excel 表列序号.py](./Python3/171.Excel 表列序号.py)     | 数学,字符串
+| 290.单词规律 | [290.单词规律.py](./Python3/290.单词规律.py)                 | 哈希表,字符串
+| 392.判断子序列 | [392.判断子序列.py](./Python3/392.判断子序列.py)               | 双指针,字符串,动态规划
+| 746.使用最小花费爬楼梯 | [746.使用最小花费爬楼梯.py](./Python3/746.使用最小花费爬楼梯.py)       | 数组,动态规划
+| 908.最小差值-i | [908.最小差值-i.py](./Python3/908.最小差值-i.py)             | 
+| 1137.第 N 个泰波那契数 | [1137.第 N 个泰波那契数.py](./Python3/1137.第 N 个泰波那契数.py)   | 记忆化搜索,数学,动态规划
+| 1646.获取生成数组中的最大值 | [1646.获取生成数组中的最大值.py](./Python3/1646.获取生成数组中的最大值.py) | 数组,动态规划,模拟
