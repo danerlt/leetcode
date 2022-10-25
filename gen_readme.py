@@ -67,7 +67,7 @@ def gen_content():
                 print(f"gen_content split 失败, py_file: {py_file}")
                 raise
             tags = get_tags_by_python_file(py_file_path)
-            row = f"| {topic_num}.{py_file_name} | [{py_file}](./Python3/{py_file}) | {tags}"
+            row = f"| {topic_num}.{py_file_name} | [{py_file}](./Python3/{py_file}) | {tags} |"
             topic_num = int(topic_num)  # 将题目号转成int类型
             tables[topic_num] = row
 
