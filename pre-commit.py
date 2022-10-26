@@ -16,13 +16,14 @@ from pathlib import Path
 
 # 当前文件路径 .git/hooks/pre-commit 或者 leetcode/pre-commit
 p = Path(__file__)
-
+print(f"current path: {p.as_posix()}")
 if ".git/hooks" in p.as_posix():
     # 说明是在.git hooks目录下
-    root_path = p.parent.parent  # 项目根路径
+    root_path = p.parent.parent.parent  # 项目根路径
 else:
     # 说明是在项目目录下执行
     root_path = p.parent  # 项目根路径
+print(f"root_path: {root_path.as_posix()}")
 readme_path = root_path.joinpath("README.md")
 python3_path = root_path.joinpath("Python3")
 
@@ -83,8 +84,8 @@ def gen_python_content(path: Path = python3_path, suffix: str = ".py"):
     :param suffix: 文件后缀 .py文件
     """
     table_head = "| 题目 | 算法实现  |  标签| \n|------|-------------|------|"
-
     tables = {}
+    print(f"gen_python_content path: {path.as_posix()}")
     for file in path.iterdir():
         if file.is_file() and file.suffix == suffix:
             filename = file.name  # 文件名
@@ -115,14 +116,14 @@ def gen_python_content(path: Path = python3_path, suffix: str = ".py"):
     tables_str = "\n".join(tables_list)
 
     content = f"{table_head}\n{tables_str}"
-    print("生成内容成功")
+    print("generate Python3 content success")
     return content
 
 
 def write_data(data):
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write(data)
-    print("写入数据成功")
+    print("write data success")
 
 
 def gen_readme():
@@ -131,7 +132,7 @@ def gen_readme():
     python3_content = gen_python_content(path=python3_path, suffix=".py")
     data = f"{title}\n\n{python3_title}\n\n{python3_content}\n\n"
     write_data(data)
-    print("生成README文件成功")
+    print("generate rademe success")
 
 
 def main():

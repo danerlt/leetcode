@@ -41,4 +41,5 @@
 | 剑指Offer05.替换空格 | [剑指Offer05.替换空格.py](Python3/剑指Offer05.替换空格.py) | 字符串 |
 | 剑指Offer06.从尾到头打印链表 | [剑指Offer06.从尾到头打印链表.py](Python3/剑指Offer06.从尾到头打印链表.py) | 栈,递归,链表,双指针 |
 | 剑指Offer07.重建二叉树 | [剑指Offer07.重建二叉树.py](Python3/剑指Offer07.重建二叉树.py) | 树,数组,哈希表,分治,二叉树 |
+| 剑指Offer10-I.斐波那契数列 | [剑指Offer10-I.斐波那契数列.py](Python3/剑指Offer10-I.斐波那契数列.py) | 记忆化搜索,数学,动态规划 |
 
