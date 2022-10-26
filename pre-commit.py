@@ -10,6 +10,7 @@
 import os
 import sys
 import traceback
+from functools import cmp_to_key
 
 from pathlib import Path
 
@@ -60,6 +61,22 @@ def get_tags_by_python_file(file_path):
         return ""
 
 
+def compare_tpoic_num(x, y):
+    try:
+        x = int(x)
+        y = int(y)
+        return x - y
+    except Exception:
+        pass
+
+    if x == y:
+        return 0
+    elif x < y:
+        return -1
+    else:
+        return 1
+
+
 def gen_python_content(path: Path = python3_path, suffix: str = ".py"):
     """生成python3内容
     :param path: 文件路径
@@ -89,11 +106,10 @@ def gen_python_content(path: Path = python3_path, suffix: str = ".py"):
             tags = get_tags_by_python_file(file)
             rela_path = file.relative_to(root_path).as_posix()  # 文件相对根路径的路径
             row = f"| {topic_num}.{topic_name} | [{filename}]({rela_path}) | {tags} |"
-            topic_num = int(topic_num)  # 将题目号转成int类型
             tables[topic_num] = row
 
     tables_list = []
-    for key in sorted(tables.keys()):
+    for key in sorted(tables.keys(), key=cmp_to_key(compare_tpoic_num)):
         row = tables[key]
         tables_list.append(row)
     tables_str = "\n".join(tables_list)
