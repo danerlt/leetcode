@@ -40,47 +40,23 @@
 #  0 <= cost[i] <= 999 
 #  
 # 
-#  Related Topics 数组 动态规划 👍 1031 👎 0
+#  Related Topics 数组 动态规划 👍 1506 👎 0
 
 
 # leetcode submit region begin(Prohibit modification and deletion)
-class Solution(object):
-    def minCostClimbingStairs(self, cost):
-        """
-        对于第n阶台阶来说 最低花费为 当前台阶花费 + min(n-1阶台阶花费, n-2阶台阶花费)
-        :type cost: List[int]
-        :rtype: int
-        """
-        # 当没有台阶时花费为0
-        # 当只有一个台阶时,直接到台阶顶,花费也为0
-        if len(cost) <= 1:
-            return 0
-        cache = [0] * len(cost)
-
-        for index, current_cost in enumerate(cost):
-            if index == 0:
-                cache[0] = cost[0]
-            elif index == 1:
-                cache[1] = min(current_cost, current_cost + cache[0])
-            else:
-                cache[index] = current_cost + min(cache[index - 1], cache[index - 2])
-
-        res = min(cache[-1], cache[-2])
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        # dp[i] 表示爬到第i个楼梯的最低花费
+        # 对于第i个楼梯来说有2中情况，最终选择比较小的那个
+        # 从第i-1个楼梯爬，花费就是dp[i-1]+cost[i-1]
+        # 从第i-2个楼梯爬，花费就是dp[i-2]+cost[i-2]
+        # dp[i] = min(dp[i-1]+cost[i-1], dp[i-2]+cost[i-2])
+        # 题目中cost长度是大于2的所有不需要考虑特殊值
+        n = len(cost)
+        dp = [0] * (n + 1)
+        for i in range(2, n + 1):
+            dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2])
+        res = dp[n]
         return res
-
-
 # leetcode submit region end(Prohibit modification and deletion)
 
-def t_solution(cost):
-    solution = Solution()
-    res = solution.minCostClimbingStairs(cost)
-    print(res)
-
-
-if __name__ == '__main__':
-    t_solution([])
-    t_solution([1])
-    t_solution([1, 2])
-    t_solution([10, 15, 20])
-    t_solution([10, 15, 20, 1])
-    t_solution([1, 100, 1, 1, 1, 100, 1, 1, 100, 1])
